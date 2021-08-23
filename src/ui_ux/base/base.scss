@@ -1,0 +1,36 @@
+@import "../abstracts/variables/variables.scss";
+
+*,
+*::before,
+*::after {
+  // Remove browser margin and padding
+  margin: 0;
+  padding: 0;
+  // Change the box model so border and paddings are not added to the total width of the box container 
+  box-sizing: inherit;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 50%;                   // 1rem = 8px;  8/16 = 50%
+
+  @include respond(min-tab-port) {
+    font-size: 56.25%;              // 1rem = 9px;  9/16 = 56.25%
+  }
+
+  @include respond(min-desktop) {
+    font-size: 62.5%;               // 1rem = 10px; 10/16 = 62.5%
+  }
+
+  @include respond(min-desk-L) {
+    font-size: 75%;                 // 1rem = 12px; 12/16 = 75%
+  }
+}
+
+body {
+  // Set project wide font definition so it gets inherited in all child elements of the page
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.6;
+}

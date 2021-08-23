@@ -1,0 +1,43 @@
+$mobile-xs: 31.25em; // 500px
+$mobile : 37.5em; // 600px
+$tablet: 56.25em; // 900px;
+$desktop: 63.125em; // 1101px;
+$desktop-lg: 75.0625em; // 1201px;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == touch-phone-only {
+    // styles needed foe anything bigger than phone
+    @media only screen and (max-width: $mobile),
+          only screen and (hover: none) {
+      @content;
+    }
+  }
+  @if $breakpoint == min-mobile-xs {
+    @media only screen and (min-width: $mobile-xs) {
+      @content;
+    }
+  }
+  @if $breakpoint == min-mobile {
+    @media only screen and (min-width: $mobile) {
+      @content;
+    }
+  }
+  @if $breakpoint == min-tab-port {
+    // styles needed for anything bigger than tablet
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+  @if $breakpoint == min-desktop {
+    // styles needed for anything bigger than desktop
+    @media only screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+  @if $breakpoint == min-desk-L {
+     // styles needed for anything bigger than L desktop
+    @media only screen and (min-width: $desktop-lg) {
+      @content;
+    }
+  }
+}

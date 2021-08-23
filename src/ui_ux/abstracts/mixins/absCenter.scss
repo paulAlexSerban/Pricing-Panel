@@ -1,0 +1,9 @@
+@mixin absCenter($leftPos: 50%, $topPos: 50%, $translated: true) {
+  position: absolute;
+  top: $topPos;
+  left: $leftPos;
+
+  @if $translated  {
+    transform: translate(-50%, -50%);
+  }
+}
