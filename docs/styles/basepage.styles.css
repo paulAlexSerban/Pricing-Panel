@@ -6,7 +6,9 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  border: 0;
+  vertical-align: baseline; }
 
 html {
   box-sizing: border-box;
@@ -24,7 +26,18 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.6; }
+  line-height: 1.6;
+  background-color: #60a9ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+
+.heading-1 {
+  font-size: 3.4rem;
+  color: #1f1f1f;
+  line-height: 2; }
 
 .mb-sm {
   margin-bottom: 2rem; }
@@ -37,4 +50,103 @@ body {
 
 .mb-hg {
   margin-bottom: 8rem; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote::before, blockquote::after, q::before, q::after {
+    content: '';
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.panel__base {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 1.5rem 2.5rem;
+  width: 100%;
+  max-width: 96rem;
+  text-align: center;
+  text-transform: uppercase; }
+  @media only screen and (min-width: 56.25em) {
+    .panel__base {
+      flex-direction: row; } }
+
+.card__base {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e1f1ff;
+  justify-content: space-between; }
+  @media only screen and (min-width: 56.25em) {
+    .card__base {
+      border-bottom: none;
+      border-right: 1px solid #e1f1ff;
+      padding: 2.5rem 5rem; } }
+  .card__base:last-child {
+    border-bottom: none; }
+    @media only screen and (min-width: 56.25em) {
+      .card__base:last-child {
+        border-right: none; } }
+
+.card__img {
+  margin-bottom: 2.5rem;
+  max-width: 100%;
+  object-fit: cover; }
+
+.card__header, .card__features-item {
+  font-weight: 600;
+  letter-spacing: 1px; }
+
+.card__header {
+  color: #888888;
+  font-size: 2.4rem; }
+
+.card__features-list {
+  margin: 5rem 0 2.5rem;
+  color: #016ff9; }
+
+.card__features-item {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 1.5rem 0; }
+  .card__features-item, .card__features-item:last-child {
+    border-bottom: 1px solid #e1f1ff; }
+
+.card__price {
+  color: #016ff9;
+  display: block;
+  font-weight: 600;
+  font-size: 3.2rem;
+  margin-bottom: 2.5rem; }
+
+.button__base {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  color: #348efe;
+  display: inline-block;
+  padding: 1.5rem 3.5rem;
+  transition: background-color .2s ease-in-out;
+  text-decoration: none;
+  justify-self: flex-end; }
+  .button__base:hover, .button__base:focus {
+    background-color: #e1f1ff; }
+  .button__base--isFeatured {
+    background-color: #48aaff;
+    color: #ffffff; }
+    .button__base--isFeatured:hover, .button__base--isFeatured:active {
+      background-color: #348efe; }
 

@@ -1,0 +1,31 @@
+@import "../../abstracts/abstracts.scss";
+
+$cmp: 'button';
+
+.#{$cmp} {
+  &__base {
+    border: 1px solid $c-baby-blue-eyes;
+    border-radius: 10px;
+    color: $c-dodger-blue;
+    display: inline-block;
+    padding: 1.5rem 3.5rem;
+    transition: background-color .2s ease-in-out;
+    text-decoration: none;
+    justify-self: flex-end;
+
+    &:hover,
+    &:focus {
+      background-color: $c-alice-blue;
+    }
+
+    &--isFeatured {
+      background-color: $c-blue-jeans;
+      color: $c-white;
+
+      &:hover,
+      &:active {
+        background-color: $c-dodger-blue;
+      }
+    }
+  }
+}

@@ -1,1 +1,7 @@
-@import '../abstracts/variables/variables.scss';
+@import "../abstracts/abstracts.scss";
+
+.heading-1 { 
+  font-size: 3.4rem;
+  color: $c-eerie-black;
+  line-height: 2;
+}
